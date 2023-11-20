@@ -481,10 +481,9 @@ GameObject:
   - component: {fileID: 586894877}
   - component: {fileID: 586894876}
   - component: {fileID: 586894875}
-  - component: {fileID: 586894880}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -602,18 +601,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 963194228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &586894880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586894874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f17f92f05091f45bb4d0b72f571276, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &618350811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ecb6c2abef85cc044815c383f17a4527, type: 3}
@@ -639,6 +626,7 @@ MonoBehaviour:
   bullet: {fileID: 586894874}
   shootForce: 300
   upwardForce: 0
+  damage: 4
   timeBetweenShooting: 0.1
   spread: 3
   reloadTime: 1.5
@@ -1067,6 +1055,7 @@ GameObject:
   - component: {fileID: 1134989139}
   - component: {fileID: 1134989138}
   - component: {fileID: 1134989137}
+  - component: {fileID: 1134989142}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: enemy
@@ -1100,7 +1089,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!135 &1134989138
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1187,6 +1176,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1134989142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134989136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4526f5d2f98e340826442938a7a7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  isDead: 0
 --- !u!1 &1429888252
 GameObject:
   m_ObjectHideFlags: 0

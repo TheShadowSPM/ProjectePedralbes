@@ -9,6 +9,8 @@ public class Shooting : MonoBehaviour
 
     public float shootForce, upwardForce;
 
+    public int damage;
+
     public float timeBetweenShooting, spread, reloadTime, timeBetweenShoots;
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
