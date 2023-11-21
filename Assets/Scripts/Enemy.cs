@@ -6,11 +6,15 @@ public class Enemy : MonoBehaviour
 {
     public int health = 20;
     public bool isDead = false;
-
     public GameObject gun;
-    int damage = gun.GetComponent<Shooting>().damage;
+    public int damage;
 
-    public void TakingDamage(int damage)
+    void Start()
+    {
+        damage = gun.GetComponent<Shooting>().damage; 
+    }
+
+    void TakingDamage(int damage)
     {
         health = health - damage;
 
